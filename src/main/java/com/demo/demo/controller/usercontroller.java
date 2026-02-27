@@ -41,6 +41,7 @@ public class usercontroller {
         return res;
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/getAllUsers")
     public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
         List<UserResponseDTO> allUsers = userServiceo.getAllUsers();

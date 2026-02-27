@@ -21,10 +21,10 @@ public class ExceptionHandling {
     public ResponseEntity<CustomeEx> handleUserAlreadyExitEx(UserAlreadyExit ex) {
         CustomeEx customEx = new CustomeEx();
         customEx.setStatusMessage("User Already Exists");
-        customEx.setStatusCode(500);
+        customEx.setStatusCode(409);
         customEx.setErrorMessage(ex.getMessage());
         customEx.setTimeStamp(java.time.LocalDateTime.now());
-        return ResponseEntity.status(500).body(customEx);
+        return ResponseEntity.status(409).body(customEx);
     }
 
 }

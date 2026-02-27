@@ -23,7 +23,7 @@ public class AdminUserCreation implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        String adminEmail = "admin123@gamail.com";
+        String adminEmail = "admin123@gmail.com";
         if (userRepo.findByEmail(adminEmail).isEmpty()) {
             User admin = new User();
             admin.setFirstName("Admin");
